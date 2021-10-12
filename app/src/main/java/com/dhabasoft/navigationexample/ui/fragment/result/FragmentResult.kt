@@ -7,13 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.dhabasoft.navigationexample.MainActivity
-import com.dhabasoft.navigationexample.MainViewModel
-import com.dhabasoft.navigationexample.R
 import com.dhabasoft.navigationexample.databinding.FragmentResultBinding
-import com.dhabasoft.navigationexample.utils.ViewModelFactory
-import com.javaindoku.www.yotanikerja.utilities.findNavController
+import com.dhabasoft.navigationexample.utils.findNavController
 
 /**
  * created by Dhaba
@@ -21,10 +16,6 @@ import com.javaindoku.www.yotanikerja.utilities.findNavController
 class FragmentResult : Fragment() {
     private var _binding: FragmentResultBinding? = null
     private val binding get() = _binding!!
-    private val sharedViewModel: MainViewModel by lazy {
-        ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-    }
-
     companion object {
         const val KEY_INPUT_TEXT = "keyInputText"
     }

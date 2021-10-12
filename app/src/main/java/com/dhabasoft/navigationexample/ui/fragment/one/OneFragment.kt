@@ -7,14 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.dhabasoft.navigationexample.MainActivity
 import com.dhabasoft.navigationexample.MainViewModel
 import com.dhabasoft.navigationexample.R
 import com.dhabasoft.navigationexample.databinding.FragmentOneBinding
 import com.dhabasoft.navigationexample.utils.ViewModelFactory
-import com.javaindoku.www.yotanikerja.utilities.findNavController
+import com.dhabasoft.navigationexample.utils.findNavController
 
 /**
  * created by Dhaba

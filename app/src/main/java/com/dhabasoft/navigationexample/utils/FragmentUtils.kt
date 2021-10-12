@@ -1,4 +1,4 @@
-package com.javaindoku.www.yotanikerja.utilities
+package com.dhabasoft.navigationexample.utils
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController

@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import com.dhabasoft.navigationexample.databinding.ActivityMainBinding
 import com.dhabasoft.navigationexample.ui.chat.ChatFragment
 import com.dhabasoft.navigationexample.ui.dashboard.DashboardFragment

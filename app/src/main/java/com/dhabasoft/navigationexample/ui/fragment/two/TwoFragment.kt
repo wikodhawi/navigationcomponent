@@ -12,9 +12,8 @@ import com.dhabasoft.navigationexample.MainActivity
 import com.dhabasoft.navigationexample.MainViewModel
 import com.dhabasoft.navigationexample.R
 import com.dhabasoft.navigationexample.databinding.FragmentTwoBinding
-import com.dhabasoft.navigationexample.ui.fragment.one.OneViewModel
 import com.dhabasoft.navigationexample.utils.ViewModelFactory
-import com.javaindoku.www.yotanikerja.utilities.findNavController
+import com.dhabasoft.navigationexample.utils.findNavController
 
 /**
  * created by Dhaba
