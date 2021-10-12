@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import com.dhabasoft.navigationexample.databinding.ActivityMainBinding
+import com.dhabasoft.navigationexample.ui.chat.ChatFragment
 import com.dhabasoft.navigationexample.ui.dashboard.DashboardFragment
 import com.dhabasoft.navigationexample.ui.home.HomeFragment
 import com.dhabasoft.navigationexample.ui.notifications.NotificationsFragment
@@ -22,7 +23,8 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val POSITION_HOME = 0
         const val POSITION_DASHBOARD = 1
-        const val POSITION_NOTIFICATIONS = 2
+        const val POSITION_CHAT = 2
+        const val POSITION_NOTIFICATIONS = 3
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +41,10 @@ class MainActivity : AppCompatActivity() {
                     openFragment(fragmentList[POSITION_HOME])
                     viewModel.position = POSITION_HOME
                 }
+                R.id.navigation_chat -> {
+                    openFragment(fragmentList[POSITION_CHAT])
+                    viewModel.position = POSITION_CHAT
+                }
                 R.id.navigation_dashboard -> {
                     openFragment(fragmentList[POSITION_DASHBOARD])
                     viewModel.position = POSITION_DASHBOARD
@@ -52,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun getFragments() : List<Fragment> = listOf(HomeFragment(), DashboardFragment(), NotificationsFragment())
+    private fun getFragments() : List<Fragment> = listOf(HomeFragment(), DashboardFragment(), ChatFragment(), NotificationsFragment())
 
     private fun openFragment(fragment: Fragment) {
         Handler().post(Runnable {

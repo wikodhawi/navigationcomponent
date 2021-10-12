@@ -52,12 +52,16 @@ class OneFragment : Fragment() {
             }
         }
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
-        if(findNavController().backStack.size != 0) {
-            (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
-            (activity as AppCompatActivity).supportActionBar?.setDisplayShowHomeEnabled(false)
+        if(findNavController().graph.startDestination != findNavController().currentDestination?.id) {
+            (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            (activity as AppCompatActivity).supportActionBar?.setDisplayShowHomeEnabled(true)
             binding.toolbar.setNavigationOnClickListener {
                 findNavController().popBackStack()
             }
+        }
+        else {
+            (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            (activity as AppCompatActivity).supportActionBar?.setDisplayShowHomeEnabled(false)
         }
     }
 }

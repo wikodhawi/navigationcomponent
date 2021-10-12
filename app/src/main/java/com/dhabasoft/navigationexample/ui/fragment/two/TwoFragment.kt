@@ -50,14 +50,21 @@ class TwoFragment : Fragment() {
             else if(sharedViewModel.position == MainActivity.POSITION_HOME) {
                 findNavController().navigate(R.id.actionHome_fragmentTwo_to_fragmentThree, null, null)
             }
+            else if(sharedViewModel.position == MainActivity.POSITION_CHAT) {
+                findNavController().navigate(R.id.actionChat_fragmentTwo_to_fragmentThree, null, null)
+            }
         }
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
-        if(findNavController().backStack.size != 0) {
+        if(findNavController().graph.startDestination != findNavController().currentDestination?.id) {
             (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
             (activity as AppCompatActivity).supportActionBar?.setDisplayShowHomeEnabled(true)
             binding.toolbar.setNavigationOnClickListener {
                 findNavController().popBackStack()
             }
+        }
+        else {
+            (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            (activity as AppCompatActivity).supportActionBar?.setDisplayShowHomeEnabled(false)
         }
     }
 }

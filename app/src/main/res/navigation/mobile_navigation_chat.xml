@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mobile_navigation_chat">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_example"
+    app:startDestination="@id/fragmentTwo"
+    >
+
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.two.TwoFragment"
+        tools:layout="@layout/fragment_two"
+    >
+        <action
+            android:id="@+id/actionChat_fragmentTwo_to_fragmentThree"
+            app:destination="@id/fragmentThree"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentThree"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.three.ThreeFragment"
+        tools:layout="@layout/fragment_three"
+    >
+        <action
+            android:id="@+id/actionChat_fragmentThree_to_fragmentOne"
+            app:destination="@id/fragmentOne"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.one.OneFragment"
+        tools:layout="@layout/fragment_one"
+    />
 
 </navigation>
