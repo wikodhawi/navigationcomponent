@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/fragmentOne"
-        android:name="com.dhabasoft.navigationexample.ui.fragment.OneFragment"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.one.OneFragment"
         tools:layout="@layout/fragment_one"
     >
         <action
@@ -23,8 +23,23 @@
 
     <fragment
         android:id="@+id/fragmentTwo"
-        android:name="com.dhabasoft.navigationexample.ui.fragment.TwoFragment"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.two.TwoFragment"
         tools:layout="@layout/fragment_two"
+    >
+        <action
+            android:id="@+id/actionDashboard_fragmentTwo_to_fragmentThree"
+            app:destination="@id/fragmentThree"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentThree"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.three.ThreeFragment"
+        tools:layout="@layout/fragment_three"
     />
 
 </navigation>
