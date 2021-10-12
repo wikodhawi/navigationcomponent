@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigations_notifications"
+    app:startDestination="@id/fragmentInput">
+
+    <fragment
+        android:id="@+id/fragmentInput"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.input.FragmentInput"
+        tools:layout="@layout/fragment_input"
+    >
+        <action
+            android:id="@+id/actionNotifications_fragmentInput_to_fragmentResult"
+            app:destination="@id/fragmentResult"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentResult"
+        android:name="com.dhabasoft.navigationexample.ui.fragment.result.FragmentResult"
+        tools:layout="@layout/fragment_result"
+    />
+
+</navigation>

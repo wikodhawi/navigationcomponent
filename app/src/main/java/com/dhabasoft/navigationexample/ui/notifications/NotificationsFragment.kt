@@ -8,12 +8,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.dhabasoft.navigationexample.R
 import com.dhabasoft.navigationexample.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
-
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var navControllerNotifications: NavController
     private var _binding: FragmentNotificationsBinding? = null
 
     // This property is only valid between onCreateView and
@@ -24,18 +25,15 @@ class NotificationsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
-
+    ): View {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val hostNotifications: NavHostFragment = childFragmentManager.findFragmentById(R.id.navHostNotifications) as NavHostFragment? ?: return
+        navControllerNotifications = hostNotifications.navController
     }
 
     override fun onDestroyView() {
