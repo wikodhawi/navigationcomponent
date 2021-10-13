@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dhabasoft.navigationexample">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,10 +9,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NavExample">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.NavExample.NoActionBar"
             android:label="@string/app_name">
+            <nav-graph android:value="@navigation/mobile_navigations_notifications" />
+        </activity>
+        <activity
+            android:name="com.dhabasoft.navigationexample.ui.deeplink.DeeplinkActivity"
+            android:theme="@style/Theme.NavExample.NoActionBar"
+            >
+            <nav-graph android:value="@navigation/mobile_navigation_deeplink" />
+        </activity>
+
+        <activity android:name="com.dhabasoft.navigationexample.ui.selector.SelectorActivity"
+            android:exported="true"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

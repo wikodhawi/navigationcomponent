@@ -1,4 +1,4 @@
-package com.dhabasoft.navigationexample
+package com.dhabasoft.navigationexample.ui.main
 
 import androidx.lifecycle.ViewModel
 

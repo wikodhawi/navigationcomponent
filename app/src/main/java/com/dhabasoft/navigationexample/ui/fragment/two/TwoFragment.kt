@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.dhabasoft.navigationexample.MainActivity
-import com.dhabasoft.navigationexample.MainViewModel
+import com.dhabasoft.navigationexample.ui.main.MainActivity
+import com.dhabasoft.navigationexample.ui.main.MainViewModel
 import com.dhabasoft.navigationexample.R
 import com.dhabasoft.navigationexample.databinding.FragmentTwoBinding
 import com.dhabasoft.navigationexample.utils.ViewModelFactory

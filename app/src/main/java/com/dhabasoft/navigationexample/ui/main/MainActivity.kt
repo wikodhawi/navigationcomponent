@@ -1,4 +1,4 @@
-package com.dhabasoft.navigationexample
+package com.dhabasoft.navigationexample.ui.main
 
 import android.os.Bundle
 import android.os.Handler
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import com.dhabasoft.navigationexample.R
 import com.dhabasoft.navigationexample.databinding.ActivityMainBinding
 import com.dhabasoft.navigationexample.ui.chat.ChatFragment
 import com.dhabasoft.navigationexample.ui.dashboard.DashboardFragment
@@ -31,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this, ViewModelFactory()).get(MainViewModel::class.java)
         setContentView(binding.root)
+        viewModel = ViewModelProvider(this, ViewModelFactory()).get(MainViewModel::class.java)
         openFragment(fragmentList[POSITION_HOME])
 
         binding.navView.setOnItemSelectedListener {

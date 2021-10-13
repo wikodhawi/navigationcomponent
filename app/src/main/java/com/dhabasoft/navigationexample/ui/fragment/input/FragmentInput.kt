@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.navOptions
-import com.dhabasoft.navigationexample.MainActivity
-import com.dhabasoft.navigationexample.MainViewModel
+import com.dhabasoft.navigationexample.ui.main.MainActivity
+import com.dhabasoft.navigationexample.ui.main.MainViewModel
 import com.dhabasoft.navigationexample.R
 import com.dhabasoft.navigationexample.databinding.FragmentInputBinding
 import com.dhabasoft.navigationexample.ui.fragment.result.FragmentResult

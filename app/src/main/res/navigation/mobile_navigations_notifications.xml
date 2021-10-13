@@ -20,6 +20,25 @@
         android:id="@+id/fragmentResult"
         android:name="com.dhabasoft.navigationexample.ui.fragment.result.FragmentResult"
         tools:layout="@layout/fragment_result"
-    />
+        >
+        <argument
+                android:name="arg2"
+                app:argType="integer"
+                android:defaultValue="2"/>
+        <argument
+                android:name="arg1"
+                app:argType="string"
+                android:defaultValue="default string"/>
+        <action
+            android:id="@+id/actionNotifications_fragmentResult_to_fragmentDeeplink"
+            app:destination="@id/fragmentNotificationsDeeplink"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentNotificationsDeeplink"
+        android:name="com.dhabasoft.navigationexample.ui.deeplink.DeeplinkFragment"
+        tools:layout="@layout/fragment_result"
+        />
 
 </navigation>
