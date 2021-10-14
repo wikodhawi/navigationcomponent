@@ -40,6 +40,17 @@
         android:id="@+id/fragmentThree"
         android:name="com.dhabasoft.navigationexample.ui.fragment.three.ThreeFragment"
         tools:layout="@layout/fragment_three"
-    />
+        >
+        <action
+            android:id="@+id/actionDashboard_fragmentThree_to_mobileNavigationHome"
+            app:destination="@id/mobile_navigation_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <include app:graph="@navigation/mobile_navigation_home"/>
 
 </navigation>

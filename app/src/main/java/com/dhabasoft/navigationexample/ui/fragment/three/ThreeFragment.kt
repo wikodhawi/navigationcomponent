@@ -45,6 +45,9 @@ class ThreeFragment : Fragment() {
         binding.textView.setOnClickListener {
             if (sharedViewModel.position == MainActivity.POSITION_CHAT) {
                 findNavController().navigate(R.id.actionChat_fragmentThree_to_fragmentOne, null, null)
+            } else if(sharedViewModel.position == MainActivity.POSITION_DASHBOARD) {
+                if(findNavController().currentDestination?.id != R.id.fragmentThreeHome)
+                    findNavController().navigate(R.id.actionDashboard_fragmentThree_to_mobileNavigationHome, null, null)
             }
         }
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)

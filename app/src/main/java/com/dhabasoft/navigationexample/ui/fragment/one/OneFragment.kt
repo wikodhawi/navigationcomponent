@@ -44,7 +44,10 @@ class OneFragment : Fragment() {
         })
         binding.textView.setOnClickListener {
             if (sharedViewModel.position == MainActivity.POSITION_DASHBOARD) {
-                findNavController().navigate(R.id.actionDashboard_fragmentOne_to_fragmentTwo, null, null)
+                if(findNavController().currentDestination?.id == R.id.fragmentOneHome)
+                    findNavController().navigate(R.id.actionHome_fragmentOne_to_fragmentTwo, null, null)
+                else
+                    findNavController().navigate(R.id.actionDashboard_fragmentOne_to_fragmentTwo, null, null)
             }
             else if(sharedViewModel.position == MainActivity.POSITION_HOME) {
                 findNavController().navigate(R.id.actionHome_fragmentOne_to_fragmentTwo, null, null)
