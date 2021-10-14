@@ -38,8 +38,9 @@ class FragmentResult : Fragment() {
         val safeArgs: FragmentResultArgs by navArgs()
         val arg1 = safeArgs.arg1
         val arg2 = safeArgs.arg2
+        val argInput = arguments?.getString("myArg")
 
-        val inputText = "${arguments?.getString(KEY_INPUT_TEXT)}\n\nargs1: $arg1\nargs2: $arg2"
+        val inputText = "${arguments?.getString(KEY_INPUT_TEXT)}\n\nargInput: $argInput\n\nargs1: $arg1\nargs2: $arg2"
         binding.textView.text = inputText
         binding.textView.setOnClickListener {
             findNavController().navigate(R.id.actionNotifications_fragmentResult_to_fragmentDeeplink, null, null)

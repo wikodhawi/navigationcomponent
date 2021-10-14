@@ -13,7 +13,13 @@
         <action
             android:id="@+id/actionNotifications_fragmentInput_to_fragmentResult"
             app:destination="@id/fragmentResult"
-            />
+            >
+            <argument
+            android:name="myArg"
+            app:argType="string"
+            android:defaultValue="Input Safe Args" />
+
+        </action>
     </fragment>
 
     <fragment
