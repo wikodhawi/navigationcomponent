@@ -1,5 +1,6 @@
 package com.dhabasoft.navigationexample.ui.deeplink
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -18,5 +19,10 @@ class DeeplinkActivity : AppCompatActivity() {
         val host: NavHostFragment = supportFragmentManager
                 .findFragmentById(R.id.navHostDeeplink) as NavHostFragment? ?: return
         navControllerDeeplink = host.navController
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        navControllerDeeplink.handleDeepLink(intent)
     }
 }

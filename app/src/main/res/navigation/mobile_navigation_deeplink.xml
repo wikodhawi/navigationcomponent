@@ -3,13 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation_deeplink"
-    app:startDestination="@id/fragmentDeeplink"
-    >
+    app:startDestination="@id/fragmentDeeplink">
 
     <fragment
         android:id="@+id/fragmentDeeplink"
         android:name="com.dhabasoft.navigationexample.ui.deeplink.DeeplinkFragment"
-        tools:layout="@layout/fragment_deeplink"
-    />
+        tools:layout="@layout/fragment_deeplink">
+
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="https://www.dhabawidhikari.com"
+            app:action="android.intent.action.MY_ACTION"
+            app:mimeType="type/subtype"
+        />
+
+    </fragment>
 
 </navigation>

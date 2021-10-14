@@ -19,6 +19,7 @@
             android:name="com.dhabasoft.navigationexample.ui.deeplink.DeeplinkActivity"
             android:theme="@style/Theme.NavExample.NoActionBar"
             android:exported="true"
+            android:launchMode="singleTop"
             >
             <nav-graph android:value="@navigation/mobile_navigation_deeplink" />
         </activity>
