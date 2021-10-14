@@ -15,7 +15,7 @@
             app:destination="@id/fragmentResult"
             >
             <argument
-            android:name="myArg"
+            android:name="inputArg"
             app:argType="string"
             android:defaultValue="Input Safe Args" />
 
@@ -28,13 +28,17 @@
         tools:layout="@layout/fragment_result"
         >
         <argument
+            android:name="inputArg"
+            app:argType="string"
+            android:defaultValue="default value notifications"/>
+        <argument
+            android:name="arg1"
+            app:argType="string"
+            android:defaultValue="default string"/>
+        <argument
                 android:name="arg2"
                 app:argType="integer"
                 android:defaultValue="2"/>
-        <argument
-                android:name="arg1"
-                app:argType="string"
-                android:defaultValue="default string"/>
         <action
             android:id="@+id/actionNotifications_fragmentResult_to_fragmentDeeplink"
             app:destination="@id/fragmentNotificationsDeeplink"
